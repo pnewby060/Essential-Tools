@@ -1,0 +1,10 @@
+1. Use the getProp text files to work with the build
+2. Use the service list to mess about with what IInterfaces through the kernel.
+3. Use IInterface classes directly like
+
+    private ITelephony getITelephony() {
+            return ITelephony.Stub.asInterface(ServiceManager.getService(Context.TELEPHONY_SERVICE));
+        }
+
+4. Look at http://www.programcreek.com/java-api-examples/index.php?source_dir=android_packages_apps_settings-master/src/com/android/settings/DeviceInfoSettings.java# for settings
+5. Look at System.getProperties java for android return values

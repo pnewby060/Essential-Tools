@@ -1,0 +1,64 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Essential Tools</string>
+    <string name="tabOneTitle">Tools</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="device_id">Id</string>
+    <string name="device_board">Board</string>
+    <string name="device_bootloader">Bootloader</string>
+    <string name="device_brand">Brand</string>
+    <string name="device_design">Design</string>
+    <string name="device_build_id">Build id</string>
+    <string name="device_fingerprint">Fingerprint</string>
+    <string name="device_hardware">Hardware build</string>
+    <string name="device_rom_creator">Rom creator</string>
+    <string name="device_firmware">Firmware version</string>
+    <string name="device_manufacturer">Manufacturer</string>
+    <string name="device_model">Model</string>
+    <string name="device_product">Product</string>
+    <string name="device_baseband">Baseband</string>
+    <string name="device_hardware_serial">Hardware serial</string>
+    <string name="device_tags">Tags</string>
+    <string name="device_rom_created">Rom created</string>
+    <string name="device_build_type">Build type</string>
+    <string name="device_maintainer">Maintainer</string>
+    <string name="device_rooted">Rooted</string>
+    <string name="shell_command_which">which</string>
+    <string name="shell_command_which_synopsis">which [-a] filename …</string>
+    <string name="shell_command_which_description">which returns the pathnames of the files (or links) which would be exe‐        cuted in the current environment, had its arguments been given as  com‐        mands  in a strictly POSIX-conformant shell.  It does this by searching        the PATH for executable files matching the names of the  arguments.  It        does not follow symbolic links.</string>
+    <string name="shell_command_which_options">-a     print all matching pathnames of each argument</string>
+    <string name="search_query_text">Search query</string>
+    <string name="run_positive_text">Run</string>
+    <string name="cancel_neutral_text">Cancel</string>
+    <string name="check_syntax_error">Error please check syntax</string>
+    <string name="shell_command_acpi">ACPI</string>
+    <string name="shell_command_acpi_synopsis">acpi [options]</string>
+    <string name="shell_command_acpi_description">acpi Shows information from the /proc or the /sys filesystem, such as battery status or thermal information.</string>
+    <string name="shell_command_acpi_options">-b show battery information\n -a show ac adapter information \n</string>
+    <string name="shell_command_getprop">getprop</string>
+    <string name="shell_command_getprop_synopsis"> getprop [property]</string>
+    <string name="shell_command_getprop_description">Gets an Android system property (value) or lists them all.</string>
+    <string name="shell_command_getprop_options">[property] name of the property to retrieve.</string>
+    <string name="shell_command_free">free</string>
+    <string name="shell_command_free_synopsis">free [options]</string>
+    <string name="shell_command_free_description">free displays the total amount of free and used physical and swap memory in the system, as well as the buffers used by the kernel. The shared memory column should be ignored; it is obsolete.</string>
+    <string name="shell_command_free_options"
+        tools:ignore="TypographyDashes">
+        &#160;-b - Display in bytes.\n
+        -k - Display in kilobytes.\n
+        -m - Display in megabytes.\n
+        -g - Display in gigabytes.\n\n
+
+        -h - Human readable format.
+
+    </string>
+    <string name="shell_command_pm">pm</string>
+
+    <!-- Escapes
+
+        &#160 = Space
+
+    -->
+
+</resources>
