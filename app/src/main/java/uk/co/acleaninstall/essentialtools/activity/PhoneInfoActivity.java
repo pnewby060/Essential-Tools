@@ -97,11 +97,6 @@ public class PhoneInfoActivity extends AppCompatActivity {
                 "The name of the underlying board, like \"goldfish\"", MyDevice.BOARD_NAME,
                 getResources().getString(R.string.gmd_developer_board));
 
-            PhoneInfoModel phoneBootloader = new PhoneInfoModel(
-                getString(R.string.device_bootloader), "The system bootloader version number",
-                MyDevice.BOOTLOADER_VERSION,
-                getResources().getString(R.string.gmd_radio));
-
             PhoneInfoModel phoneBrand = new PhoneInfoModel(getString(R.string.device_brand),
                 "The consumer-visible brand with which the product/hardware will be associated, if any",
                 MyDevice.BRAND_NAME,
@@ -122,7 +117,6 @@ public class PhoneInfoActivity extends AppCompatActivity {
 
             list.add(phoneId);
             list.add(phoneBoard);
-            list.add(phoneBootloader);
             list.add(phoneBrand);
             list.add(phoneDesign);
             list.add(phoneModel);
