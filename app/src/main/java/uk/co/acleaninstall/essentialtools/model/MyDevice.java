@@ -10,6 +10,23 @@ import java.lang.reflect.Method;
 @SuppressLint("NewApi")
 public class MyDevice {
 
+    /**
+     * some product info from my device to refer to:
+     *
+     [ro.product.board]: [MAKO]
+     [ro.product.brand]: [google]
+     [ro.product.cpu.abi]: [armeabi-v7a]
+     [ro.product.cpu.abi2]: [armeabi]
+     [ro.product.cpu.abilist]: [armeabi-v7a,armeabi]
+     [ro.product.cpu.abilist32]: [armeabi-v7a,armeabi]
+     [ro.product.cpu.abilist64]: []
+     [ro.product.device]: [mako]
+     [ro.product.locale]: [en-US]
+     [ro.product.manufacturer]: [LGE]
+     [ro.product.model]: [ED209]
+     [ro.product.name]: [xenonhd_mako]
+     */
+
     @SuppressLint("HardwareIds")
     public static String ANDROID_ID(@NonNull Context context) {
         return Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
