@@ -133,9 +133,6 @@ public class BuildInfoActivity extends AppCompatActivity {
                 "The maintainer of the rom", MyBuild.USER,
                 getResources().getString(R.string.gmd_android));
 
-            /*BuildInfoModel androidRoot = new BuildInfoModel(getString(R.string.device_rooted), "Information about the root status of this device", String.valueOf(Utils.checkSuExists()),
-                    getResources().getString(R.string.gmd_warning));*/
-
             list.add(buildDisplayId);
             list.add(buildFingerprint);
             list.add(buildHardware);
