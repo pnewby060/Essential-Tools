@@ -10,13 +10,14 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import java.util.ArrayList;
 import java.util.List;
-import uk.co.acleaninstall.essentialtools.MyApp;
 import uk.co.acleaninstall.essentialtools.R;
 import uk.co.acleaninstall.essentialtools.adapter.PhoneInfoRecyclerviewAdapter;
 import uk.co.acleaninstall.essentialtools.listener.CustomItemClickListener;
 import uk.co.acleaninstall.essentialtools.model.MyDevice;
 import uk.co.acleaninstall.essentialtools.model.PhoneInfoModel;
 import uk.co.acleaninstall.essentialtools.util.MiscTools;
+
+import static uk.co.acleaninstall.essentialtools.MyApp.getContext;
 
 public class PhoneInfoActivity extends AppCompatActivity {
 
@@ -89,7 +90,7 @@ public class PhoneInfoActivity extends AppCompatActivity {
 
             // Our list of phone info models to choose from
             PhoneInfoModel phoneId = new PhoneInfoModel(getString(R.string.device_id),
-                "Information about the devices ID", MyDevice.ANDROID_ID(MyApp.getContext()),
+                "Information about the devices ID", MyDevice.ANDROID_ID(getContext()),
                 getResources().getString(R.string.gmd_phone_android));
 
             PhoneInfoModel phoneBoard = new PhoneInfoModel(getString(R.string.device_board),
