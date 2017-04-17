@@ -35,8 +35,6 @@ public class MyDevice {
 
     public static final String BOARD_NAME =
         Build.BOARD;
-    public static final String BOOTLOADER_VERSION =
-        Build.BOOTLOADER;
     public static final String BRAND_NAME =
         Build.BRAND;
     public static final String DESIGN_NAME =
