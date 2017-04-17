@@ -19,6 +19,7 @@ import uk.co.acleaninstall.essentialtools.viewpager.MyPageChangeListener;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
+
     @BindView(R.id.toolbar)
     public Toolbar mToolbar;
 
@@ -51,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override protected void onDestroy() {
 
+        // cleanup our console history
         ShellManager.get().cleanupShells();
 
         super.onDestroy();
@@ -58,7 +60,10 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void setupToolbar() {
+
         setSupportActionBar(mToolbar);
+
+        // push out toolbar down from no action bar theme value
         mToolbar.setPadding(0, MiscTools.getStatusBarHeight(), 0, 0);
     }
 
