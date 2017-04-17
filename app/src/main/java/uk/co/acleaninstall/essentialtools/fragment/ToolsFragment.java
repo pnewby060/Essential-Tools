@@ -73,6 +73,8 @@ public class ToolsFragment extends Fragment {
             getResources().getString(R.string.gmd_sim_card));
         ToolModel model4 = new ToolModel("Other Information", "Some other useful tools",
             getResources().getString(R.string.gmd_pan_tool));
+        ToolModel model5 = new ToolModel("Root Information", "Info about Root settings from device",
+            getResources().getString(R.string.gmd_developer_mode));
 
         // Create an Arraytlist to work with our RecyclerView
         ArrayList<ToolModel> toolModels = new ArrayList<>();
@@ -80,6 +82,7 @@ public class ToolsFragment extends Fragment {
         toolModels.add(model2);
         toolModels.add(model3);
         toolModels.add(model4);
+        toolModels.add(model5);
 
         // Setup our adapter and custom onclick listener
         mAdapter = new ToolsRecyclerviewAdapter(toolModels, new CustomItemClickListener() {
