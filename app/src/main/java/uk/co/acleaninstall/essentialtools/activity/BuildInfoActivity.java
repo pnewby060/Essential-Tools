@@ -116,6 +116,10 @@ public class BuildInfoActivity extends AppCompatActivity {
                 "The baseband radio version number", MyBuild.RADIO_VERSION,
                 getResources().getString(R.string.gmd_android));
 
+            BuildInfoModel buildSerial = new BuildInfoModel(getString(R.string.device_hardware_serial),
+                "A hardware serial number, if available.  Alphanumeric only, case-insensitive.", MyBuild.SERIAL,
+                getResources().getString(R.string.gmd_memory));
+
             BuildInfoModel buildBuildTags = new BuildInfoModel(getString(R.string.device_tags),
                 "Comma-separated tags describing the build, like \"unsigned,debug\"",
                 MyBuild.BUILD_TAGS,
@@ -141,6 +145,7 @@ public class BuildInfoActivity extends AppCompatActivity {
             list.add(buildProduct);
             list.add(buildRadio);
             list.add(buildBuildTags);
+            list.add(buildSerial);
             list.add(buildTime);
             list.add(buildType);
             list.add(buildUser);
