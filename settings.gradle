@@ -1,0 +1,2 @@
+include ':app', ':lazylibrary'
+project(':app').projectDir = new File('app')
