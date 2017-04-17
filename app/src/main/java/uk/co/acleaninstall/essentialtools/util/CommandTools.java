@@ -5,17 +5,17 @@ final class CommandTools {
     private CommandTools() {throw new Error("Do not need instantiate!");}
 
 
-    private static class Command {
+    public static class Command {
 
         private Command() {throw new Error("Do not need instantiate!");}
 
 
-        private static String cat() {
+        public static String cat() {
             return "cat ";
         }
 
 
-        private static String echo() {
+        public static String echo() {
             return "echo > ";
         }
 
