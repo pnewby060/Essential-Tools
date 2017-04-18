@@ -11,6 +11,8 @@
     <string name="device_brand">Brand</string>
     <string name="device_cpus">CPU</string>
     <string name="device_design">Design</string>
+    <string name="device_locale">Locale language</string>
+    <string name="device_region">Locale region</string>
     <string name="device_build_id">Build id</string>
     <string name="device_fingerprint">Fingerprint</string>
     <string name="device_hardware">Hardware build</string>
