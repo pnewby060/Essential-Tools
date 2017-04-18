@@ -7,38 +7,40 @@ import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import uk.co.acleaninstall.essentialtools.MyApp;
 
 @SuppressLint("NewApi")
 public class MyBuild {
 
     /**
-     *
      * some build info from my device to refer to:
      *
-     [ro.build.characteristics]: [nosdcard]
-     [ro.build.date]: [Wed Feb 15 17:51:31 IST 2017]
-     [ro.build.date.utc]: [1487161291]
-     [ro.build.description]: [xenonhd_mako-userdebug 7.1.1 NMF26V d559d5a815 test-keys]
-     [ro.build.display.id]: [xenonhd_mako-userdebug 7.1.1 NMF26V d559d5a815 test-keys]
-     [ro.build.fingerprint]: [google/xenonhd_mako/mako:7.1.1/NMF26V/d559d5a815:userdebug/test-keys]
-     [ro.build.flavor]: [xenonhd_mako-userdebug]
-     [ro.build.host]: [Supernova]
-     [ro.build.id]: [NMF26V]
-     [ro.build.product]: [mako]
-     [ro.build.selinux]: [1]
-     [ro.build.tags]: [test-keys]
-     [ro.build.type]: [userdebug]
-     [ro.build.user]: [jenkins]
-     [ro.build.version.all_codenames]: [REL]
-     [ro.build.version.base_os]: []
-     [ro.build.version.codename]: [REL]
-     [ro.build.version.incremental]: [d559d5a815]
-     [ro.build.version.preview_sdk]: [0]
-     [ro.build.version.release]: [7.1.1]
-     [ro.build.version.sdk]: [25]
-     [ro.build.version.security_patch]: [2017-01-05]
+     * [ro.build.characteristics]: [nosdcard]
+     * [ro.build.date]: [Wed Feb 15 17:51:31 IST 2017]
+     * [ro.build.date.utc]: [1487161291]
+     * [ro.build.description]: [xenonhd_mako-userdebug 7.1.1 NMF26V d559d5a815 test-keys]
+     * [ro.build.display.id]: [xenonhd_mako-userdebug 7.1.1 NMF26V d559d5a815 test-keys]
+     * [ro.build.fingerprint]: [google/xenonhd_mako/mako:7.1.1/NMF26V/d559d5a815:userdebug/test-keys]
+     * [ro.build.flavor]: [xenonhd_mako-userdebug]
+     * [ro.build.host]: [Supernova]
+     * [ro.build.id]: [NMF26V]
+     * [ro.build.product]: [mako]
+     * [ro.build.selinux]: [1]
+     * [ro.build.tags]: [test-keys]
+     * [ro.build.type]: [userdebug]
+     * [ro.build.user]: [jenkins]
+     * [ro.build.version.all_codenames]: [REL]
+     * [ro.build.version.base_os]: []
+     * [ro.build.version.codename]: [REL]
+     * [ro.build.version.incremental]: [d559d5a815]
+     * [ro.build.version.preview_sdk]: [0]
+     * [ro.build.version.release]: [7.1.1]
+     * [ro.build.version.sdk]: [25]
+     * [ro.build.version.security_patch]: [2017-01-05]
      */
 
+    public static final String BUILD_CHARACTERISTICS =
+        SystemProperties.get(MyApp.getContext(), "ro.build.characteristics");
     public static final String DISPLAY_NAME =
         Build.DISPLAY;
     public static final String FINGERPRINT =
@@ -56,7 +58,7 @@ public class MyBuild {
     public static final String BUILD_TAGS =
         Build.TAGS;
     public static final String TIME =
-        new SimpleDateFormat("MM/dd/yyyy", Locale.ENGLISH)
+        new SimpleDateFormat("\"yyyy-MM-dd HH:mm:ss\"", Locale.ENGLISH)
             .format(new Date(Build.TIME));
     public static final String BUILD_TYPE =
         Build.TYPE;

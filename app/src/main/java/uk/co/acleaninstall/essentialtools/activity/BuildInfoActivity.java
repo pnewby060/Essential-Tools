@@ -86,6 +86,10 @@ public class BuildInfoActivity extends AppCompatActivity {
 
         ArrayList<BuildInfoModel> getList() {
 
+            BuildInfoModel buildCharacteristics = new BuildInfoModel(getString(R.string.device_build_characteristics),
+                "Displays any special characterisitics about the device", MyBuild.BUILD_CHARACTERISTICS,
+                getResources().getString(R.string.faw_building));
+
             // Our list of build info models to choose from
             BuildInfoModel buildDisplayId = new BuildInfoModel(getString(R.string.device_build_id),
                 "A build ID string meant for displaying to the user", MyBuild.DISPLAY_NAME,
@@ -133,6 +137,7 @@ public class BuildInfoActivity extends AppCompatActivity {
                 "The maintainer of the rom", MyBuild.USER,
                 getResources().getString(R.string.gmd_android));
 
+            list.add(buildCharacteristics);
             list.add(buildDisplayId);
             list.add(buildFingerprint);
             list.add(buildHardware);

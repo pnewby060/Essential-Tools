@@ -59,6 +59,7 @@
 
     </string>
     <string name="shell_command_pm">pm</string>
+    <string name="device_build_characteristics">Characteristics</string>
 
     <!-- Escapes
 
