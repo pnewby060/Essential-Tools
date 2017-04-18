@@ -102,6 +102,11 @@ public class PhoneInfoActivity extends AppCompatActivity {
                 MyDevice.BRAND_NAME,
                 getResources().getString(R.string.gmd_branding_watermark));
 
+            PhoneInfoModel phoneCpuTypes = new PhoneInfoModel(getString(R.string.device_cpus),
+                "An ordered list of ABIs supported by this device. The most preferred ABI is the first element in the list",
+                MyDevice.CPU_TYPES,
+                getResources().getString(R.string.gmd_developer_board));
+
             PhoneInfoModel phoneDesign = new PhoneInfoModel(getString(R.string.device_design),
                 "The name of the industrial design", MyDevice.DESIGN_NAME,
                 getResources().getString(R.string.gmd_format_color_fill));
@@ -118,6 +123,7 @@ public class PhoneInfoActivity extends AppCompatActivity {
             list.add(phoneId);
             list.add(phoneBoard);
             list.add(phoneBrand);
+            list.add(phoneCpuTypes);
             list.add(phoneDesign);
             list.add(phoneModel);
             list.add(phoneManufacturer);
