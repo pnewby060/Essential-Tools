@@ -66,7 +66,7 @@ public class ToolsFragment extends Fragment {
 
         // Our List of items to choose from
         ToolModel model1 = new ToolModel("Phone Information",
-            "Show detailed information of your phone", getResources().getString(R.string.gmd_adb));
+            "Show detailed information of your phone", getResources().getString(R.string.gmd_phone));
         ToolModel model2 = new ToolModel("Build Information", "Show information about the build",
             getResources().getString(R.string.gmd_android));
         ToolModel model3 = new ToolModel("Sim Information", "Show sim card details",
@@ -95,14 +95,19 @@ public class ToolsFragment extends Fragment {
                         startActivity(new Intent(v.getContext(), PhoneInfoActivity.class));
                         break;
                     case 1:
+                        // Build Info Activity
                         startActivity(new Intent(v.getContext(), BuildInfoActivity.class));
                         break;
                     case 2:
+                        // Sim Info Activity
                         startActivity(new Intent(v.getContext(), SimInfoActivity.class));
                         break;
                     case 3:
+                        // Other Tools Activity
                         startActivity(new Intent(v.getContext(), OtherToolsActivity.class));
                         break;
+
+                    // TODO case 4 rootInfoActivity
                 }
 
             }

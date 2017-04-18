@@ -61,8 +61,6 @@ public class MyDevice {
         Build.PRODUCT;
 
 
-
-
     /**
      * allows user to read build.prop files for properties and access the hidden
      * android.os.SystemProperties
