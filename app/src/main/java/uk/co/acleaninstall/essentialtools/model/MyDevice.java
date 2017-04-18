@@ -48,11 +48,8 @@ public class MyDevice {
     public static final String DESIGN_NAME =
         Build.DEVICE;
 
-    public static final String LOCALE_LANG =
-        SystemProperties.get(MyApp.getContext(), "ro.product.locale.language");
-
-    public static final String LOCALE_REGION =
-        SystemProperties.get(MyApp.getContext(), "ro.product.locale.region");
+    public static final String LOCALE =
+        SystemProperties.get(MyApp.getContext(), "ro.product.locale");
 
     public static final String MODEL_NAME =
         Build.MODEL;

@@ -111,13 +111,9 @@ public class PhoneInfoActivity extends AppCompatActivity {
                 "The name of the industrial design", MyDevice.DESIGN_NAME,
                 getResources().getString(R.string.gmd_format_color_fill));
 
-            PhoneInfoModel phoneLocaleLang = new PhoneInfoModel(getString(R.string.device_locale),
-                "The default language", MyDevice.LOCALE_LANG,
+            PhoneInfoModel phoneLocale = new PhoneInfoModel(getString(R.string.device_locale),
+                "The default locale for phone", MyDevice.LOCALE,
                 getResources().getString(R.string.gmd_language));
-
-            PhoneInfoModel phoneLocaleRegion = new PhoneInfoModel(getString(R.string.device_region),
-                "The default region", MyDevice.LOCALE_REGION,
-                getResources().getString(R.string.gmd_flag));
 
             PhoneInfoModel phoneManufacturer = new PhoneInfoModel(
                 getString(R.string.device_manufacturer), "The phones manufacturer",
@@ -133,8 +129,7 @@ public class PhoneInfoActivity extends AppCompatActivity {
             list.add(phoneBrand);
             list.add(phoneCpuTypes);
             list.add(phoneDesign);
-            list.add(phoneLocaleLang);
-            list.add(phoneLocaleRegion);
+            list.add(phoneLocale);
             list.add(phoneManufacturer);
             list.add(phoneModel);
 
