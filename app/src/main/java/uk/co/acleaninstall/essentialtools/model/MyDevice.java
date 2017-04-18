@@ -6,6 +6,7 @@ import android.os.Build;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import java.lang.reflect.Method;
+import uk.co.acleaninstall.essentialtools.MyApp;
 
 @SuppressLint("NewApi")
 public class MyDevice {
@@ -42,14 +43,24 @@ public class MyDevice {
     public static final String CPU_TYPES =
         Build.CPU_ABI + " , " + Build.CPU_ABI2;
 
+    // TODO "Add ABI List and 64 Bit Cpus
+
     public static final String DESIGN_NAME =
         Build.DEVICE;
+
+    public static final String LOCALE_LANG =
+        SystemProperties.get(MyApp.getContext(), "ro.product.locale.language");
+
+    public static final String LOCALE_REGION =
+        SystemProperties.get(MyApp.getContext(), "ro.product.locale.region");
 
     public static final String MODEL_NAME =
         Build.MODEL;
 
     public static final String MANUFACTURER_NAME =
         Build.MANUFACTURER;
+
+
 
 
     /**
