@@ -49,8 +49,6 @@ public class MyBuild {
         Build.HOST;
     public static final String FIRMWARE =
         Build.ID;
-    public static final String PRODUCT_NAME =
-        Build.PRODUCT;
     public static final String RADIO_VERSION =
         Build.getRadioVersion();
     public static final String SERIAL =

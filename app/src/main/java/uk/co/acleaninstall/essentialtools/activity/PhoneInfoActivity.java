@@ -124,6 +124,10 @@ public class PhoneInfoActivity extends AppCompatActivity {
                 "The name / model of phone", MyDevice.MODEL_NAME,
                 getResources().getString(R.string.gmd_format_color_fill));
 
+            PhoneInfoModel phoneProduct = new PhoneInfoModel(getString(R.string.device_product),
+                "The name of the overall product", MyDevice.PRODUCT_NAME,
+                getResources().getString(R.string.gmd_android));
+
             list.add(phoneId);
             list.add(phoneBoard);
             list.add(phoneBrand);
@@ -132,6 +136,7 @@ public class PhoneInfoActivity extends AppCompatActivity {
             list.add(phoneLocale);
             list.add(phoneManufacturer);
             list.add(phoneModel);
+            list.add(phoneProduct);
 
             return (ArrayList<PhoneInfoModel>) list;
         }

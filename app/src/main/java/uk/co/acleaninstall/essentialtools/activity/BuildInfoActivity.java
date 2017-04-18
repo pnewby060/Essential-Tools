@@ -108,10 +108,6 @@ public class BuildInfoActivity extends AppCompatActivity {
                 "Either a changelist number, or a label like \"M4-rc20\"", MyBuild.FIRMWARE,
                 getResources().getString(R.string.gmd_mode_edit));
 
-            BuildInfoModel buildProduct = new BuildInfoModel(getString(R.string.device_product),
-                "The name of the overall product", MyBuild.PRODUCT_NAME,
-                getResources().getString(R.string.gmd_android));
-
             BuildInfoModel buildRadio = new BuildInfoModel(getString(R.string.device_baseband),
                 "The baseband radio version number", MyBuild.RADIO_VERSION,
                 getResources().getString(R.string.gmd_android));
@@ -142,7 +138,6 @@ public class BuildInfoActivity extends AppCompatActivity {
             list.add(buildHardware);
             list.add(buildHost);
             list.add(buildId2);
-            list.add(buildProduct);
             list.add(buildRadio);
             list.add(buildBuildTags);
             list.add(buildSerial);

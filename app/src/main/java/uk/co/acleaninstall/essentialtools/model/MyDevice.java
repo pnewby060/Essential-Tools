@@ -57,6 +57,9 @@ public class MyDevice {
     public static final String MANUFACTURER_NAME =
         Build.MANUFACTURER;
 
+    public static final String PRODUCT_NAME =
+        Build.PRODUCT;
+
 
 
 
