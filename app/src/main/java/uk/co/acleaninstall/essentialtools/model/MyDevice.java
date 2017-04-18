@@ -13,18 +13,18 @@ public class MyDevice {
     /**
      * some product info from my device to refer to:
      *
-     [ro.product.board]: [MAKO]
-     [ro.product.brand]: [google]
-     [ro.product.cpu.abi]: [armeabi-v7a]
-     [ro.product.cpu.abi2]: [armeabi]
-     [ro.product.cpu.abilist]: [armeabi-v7a,armeabi]
-     [ro.product.cpu.abilist32]: [armeabi-v7a,armeabi]
-     [ro.product.cpu.abilist64]: []
-     [ro.product.device]: [mako]
-     [ro.product.locale]: [en-US]
-     [ro.product.manufacturer]: [LGE]
-     [ro.product.model]: [ED209]
-     [ro.product.name]: [xenonhd_mako]
+     * [ro.product.board]: [MAKO]
+     * [ro.product.brand]: [google]
+     * [ro.product.cpu.abi]: [armeabi-v7a]
+     * [ro.product.cpu.abi2]: [armeabi]
+     * [ro.product.cpu.abilist]: [armeabi-v7a,armeabi]
+     * [ro.product.cpu.abilist32]: [armeabi-v7a,armeabi]
+     * [ro.product.cpu.abilist64]: []
+     * [ro.product.device]: [mako]
+     * [ro.product.locale]: [en-US]
+     * [ro.product.manufacturer]: [LGE]
+     * [ro.product.model]: [ED209]
+     * [ro.product.name]: [xenonhd_mako]
      */
 
     @SuppressLint("HardwareIds")
@@ -35,12 +35,19 @@ public class MyDevice {
 
     public static final String BOARD_NAME =
         Build.BOARD;
+
     public static final String BRAND_NAME =
         Build.BRAND;
+
+    public static final String CPU_TYPES =
+        Build.CPU_ABI + " , " + Build.CPU_ABI2;
+
     public static final String DESIGN_NAME =
         Build.DEVICE;
+
     public static final String MODEL_NAME =
         Build.MODEL;
+
     public static final String MANUFACTURER_NAME =
         Build.MANUFACTURER;
 
