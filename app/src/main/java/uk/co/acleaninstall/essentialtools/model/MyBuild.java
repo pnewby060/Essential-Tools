@@ -58,7 +58,7 @@ public class MyBuild {
     public static final String BUILD_TAGS =
         Build.TAGS;
     public static final String TIME =
-        new SimpleDateFormat("\"yyyy-MM-dd HH:mm:ss\"", Locale.ENGLISH)
+        new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH)
             .format(new Date(Build.TIME));
     public static final String BUILD_TYPE =
         Build.TYPE;

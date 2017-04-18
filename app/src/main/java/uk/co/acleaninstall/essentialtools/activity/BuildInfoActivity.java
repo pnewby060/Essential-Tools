@@ -86,8 +86,10 @@ public class BuildInfoActivity extends AppCompatActivity {
 
         ArrayList<BuildInfoModel> getList() {
 
-            BuildInfoModel buildCharacteristics = new BuildInfoModel(getString(R.string.device_build_characteristics),
-                "Displays any special characterisitics about the device", MyBuild.BUILD_CHARACTERISTICS,
+            BuildInfoModel buildCharacteristics = new BuildInfoModel(
+                getString(R.string.device_build_characteristics),
+                "Displays any special characterisitics about the device",
+                MyBuild.BUILD_CHARACTERISTICS,
                 getResources().getString(R.string.faw_building));
 
             // Our list of build info models to choose from
@@ -114,28 +116,30 @@ public class BuildInfoActivity extends AppCompatActivity {
 
             BuildInfoModel buildRadio = new BuildInfoModel(getString(R.string.device_baseband),
                 "The baseband radio version number", MyBuild.RADIO_VERSION,
-                getResources().getString(R.string.gmd_android));
+                getResources().getString(R.string.gmd_radio));
 
-            BuildInfoModel buildSerial = new BuildInfoModel(getString(R.string.device_hardware_serial),
-                "A hardware serial number, if available.  Alphanumeric only, case-insensitive.", MyBuild.SERIAL,
+            BuildInfoModel buildSerial = new BuildInfoModel(
+                getString(R.string.device_hardware_serial),
+                "A hardware serial number, if available.  Alphanumeric only, case-insensitive.",
+                MyBuild.SERIAL,
                 getResources().getString(R.string.gmd_memory));
 
             BuildInfoModel buildBuildTags = new BuildInfoModel(getString(R.string.device_tags),
                 "Comma-separated tags describing the build, like \"unsigned,debug\"",
                 MyBuild.BUILD_TAGS,
-                getResources().getString(R.string.gmd_android));
+                getResources().getString(R.string.gmd_tag_faces));
 
             BuildInfoModel buildTime = new BuildInfoModel(getString(R.string.device_rom_created),
                 "The date this rom was created", MyBuild.TIME,
-                getResources().getString(R.string.gmd_android));
+                getResources().getString(R.string.gmd_date_range));
 
             BuildInfoModel buildType = new BuildInfoModel(getString(R.string.device_build_type),
                 "The type of build, like \"user\" or \"eng\"", MyBuild.BUILD_TYPE,
-                getResources().getString(R.string.gmd_android));
+                getResources().getString(R.string.gmd_merge_type));
 
             BuildInfoModel buildUser = new BuildInfoModel(getString(R.string.device_maintainer),
                 "The maintainer of the rom", MyBuild.USER,
-                getResources().getString(R.string.gmd_android));
+                getResources().getString(R.string.gmd_verified_user));
 
             list.add(buildCharacteristics);
             list.add(buildDisplayId);
