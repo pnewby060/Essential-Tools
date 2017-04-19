@@ -40,7 +40,8 @@
         <activity
             android:name=".activity.ShellCommandsActivity"
             android:label=""
-            android:parentActivityName=".activity.MainActivity"></activity>
+            android:parentActivityName=".activity.MainActivity"
+            android:windowSoftInputMode="adjustPan"></activity>
         <activity
             android:name=".activity.OtherToolsActivity"
             android:label=""
