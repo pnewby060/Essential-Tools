@@ -13,7 +13,7 @@
     <string name="device_design">Design</string>
     <string name="device_locale">Locale language</string>
     <string name="device_region">Locale region</string>
-    <string name="device_build_id">Device build id</string>
+    <string name="device_build_id">Id</string>
     <string name="device_fingerprint">Fingerprint</string>
     <string name="device_hardware">Hardware build</string>
     <string name="device_host">Host</string>
@@ -21,11 +21,11 @@
     <string name="device_manufacturer">Manufacturer</string>
     <string name="device_model">Model</string>
     <string name="device_product">Product</string>
-    <string name="device_baseband">Baseband</string>
-    <string name="device_hardware_serial">Hardware serial</string>
+    <string name="device_baseband">Radio</string>
+    <string name="device_hardware_serial">Serial</string>
     <string name="device_tags">Tags</string>
     <string name="device_rom_created">Rom created</string>
-    <string name="device_build_type">Build type</string>
+    <string name="device_build_type">Type</string>
     <string name="device_maintainer">Maintainer</string>
     <string name="device_rooted">Rooted</string>
 
