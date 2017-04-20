@@ -5,6 +5,7 @@ import android.app.Application;
 import android.content.Context;
 import android.os.PowerManager;
 import android.telephony.TelephonyManager;
+import android.view.inputmethod.InputMethodManager;
 import at.amartinz.hardware.device.Device;
 import com.mikepenz.iconics.context.IconicsContextWrapper;
 import com.nillith.android.common.MiscUtils;
@@ -66,5 +67,13 @@ public class MyApp extends Application {
      */
     public static ActivityManager getActivityManager() {
         return (ActivityManager) getContext().getSystemService(ACTIVITY_SERVICE);
+    }
+
+
+    /**
+     * @return - The InputManager Class
+     */
+    public static InputMethodManager getInputMethodManager() {
+        return (InputMethodManager) getContext().getSystemService(INPUT_METHOD_SERVICE);
     }
 }
