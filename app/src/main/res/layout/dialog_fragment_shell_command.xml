@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/runCommandLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
     android:orientation="vertical">
 
     <LinearLayout
@@ -108,8 +111,8 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/runCommandDialogClearButton"
             style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:id="@+id/runCommandDialogClearButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -118,8 +121,8 @@
             android:text="Clear"/>
 
         <Button
-            android:id="@+id/runCommandDialogCancelButton"
             style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:id="@+id/runCommandDialogCancelButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -131,8 +134,8 @@
             android:text="Cancel"/>
 
         <Button
-            android:id="@+id/runCommandDialogRunButton"
             style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:id="@+id/runCommandDialogRunButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
