@@ -13,10 +13,10 @@
     <string name="device_design">Design</string>
     <string name="device_locale">Locale language</string>
     <string name="device_region">Locale region</string>
-    <string name="device_build_id">Build id</string>
+    <string name="device_build_id">Device build id</string>
     <string name="device_fingerprint">Fingerprint</string>
     <string name="device_hardware">Hardware build</string>
-    <string name="device_rom_creator">Rom creator</string>
+    <string name="device_host">Host</string>
     <string name="device_firmware">Firmware version</string>
     <string name="device_manufacturer">Manufacturer</string>
     <string name="device_model">Model</string>
@@ -60,6 +60,7 @@
     </string>
     <string name="shell_command_pm">pm</string>
     <string name="device_build_characteristics">Characteristics</string>
+    <string name="device_selinux">SELinux status</string>
 
     <!-- Escapes
 
