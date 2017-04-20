@@ -4,9 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Build;
 import java.lang.reflect.Method;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
 import uk.co.acleaninstall.essentialtools.MyApp;
 
 @SuppressLint("NewApi")
@@ -58,8 +55,7 @@ public class MyBuild {
     public static final String BUILD_TAGS =
         Build.TAGS;
     public static final String TIME =
-        new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH)
-            .format(new Date(Build.TIME));
+        SystemProperties.get(MyApp.getContext(), "ro.build.date");
     public static final String BUILD_TYPE =
         Build.TYPE;
     public static final String USER =
