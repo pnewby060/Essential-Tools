@@ -86,15 +86,17 @@ public class BuildInfoActivity extends AppCompatActivity {
 
         ArrayList<BuildInfoModel> getList() {
 
+            // Our list of build info models to choose from
+
             BuildInfoModel buildCharacteristics = new BuildInfoModel(
                 getString(R.string.device_build_characteristics),
-                "Displays any special characterisitics about the device",
+                "Displays any special characteristics about the device",
                 MyBuild.BUILD_CHARACTERISTICS,
                 getResources().getString(R.string.faw_building));
 
-            // Our list of build info models to choose from
             BuildInfoModel buildDisplayId = new BuildInfoModel(getString(R.string.device_build_id),
-                "A build ID string meant for displaying to the user", MyBuild.DISPLAY_NAME,
+                "A build ID string meant for displaying to the user. This shows in the settings screen",
+                MyBuild.DISPLAY_NAME,
                 getResources().getString(R.string.gmd_build));
 
             BuildInfoModel buildFingerprint = new BuildInfoModel(
@@ -102,17 +104,17 @@ public class BuildInfoActivity extends AppCompatActivity {
                 "A string that uniquely identifies this build", MyBuild.FINGERPRINT,
                 getResources().getString(R.string.gmd_fingerprint));
 
+            BuildInfoModel buildFirmware = new BuildInfoModel(getString(R.string.device_firmware),
+                "Either a changelist number, or a label like \"M4-rc20\"", MyBuild.FIRMWARE,
+                getResources().getString(R.string.gmd_mode_edit));
+
             BuildInfoModel buildHardware = new BuildInfoModel(getString(R.string.device_hardware),
                 "A string that uniquely identifies this build", MyBuild.HARDWARE,
                 getResources().getString(R.string.gmd_devices_other));
 
-            BuildInfoModel buildHost = new BuildInfoModel(getString(R.string.device_rom_creator),
+            BuildInfoModel buildHost = new BuildInfoModel(getString(R.string.device_host),
                 "The person / company who created the rom", MyBuild.HOST,
                 getResources().getString(R.string.gmd_phone_android));
-
-            BuildInfoModel buildId2 = new BuildInfoModel(getString(R.string.device_firmware),
-                "Either a changelist number, or a label like \"M4-rc20\"", MyBuild.FIRMWARE,
-                getResources().getString(R.string.gmd_mode_edit));
 
             BuildInfoModel buildRadio = new BuildInfoModel(getString(R.string.device_baseband),
                 "The baseband radio version number", MyBuild.RADIO_VERSION,
@@ -123,6 +125,12 @@ public class BuildInfoActivity extends AppCompatActivity {
                 "A hardware serial number, if available.  Alphanumeric only, case-insensitive.",
                 MyBuild.SERIAL,
                 getResources().getString(R.string.gmd_memory));
+
+            BuildInfoModel buildSeLinux = new BuildInfoModel(
+                getString(R.string.device_selinux),
+                "Shows the state of the SELinux on the device",
+                MyBuild.SELINUX(),
+                getResources().getString(R.string.gmd_security));
 
             BuildInfoModel buildBuildTags = new BuildInfoModel(getString(R.string.device_tags),
                 "Comma-separated tags describing the build, like \"unsigned,debug\"",
@@ -144,11 +152,12 @@ public class BuildInfoActivity extends AppCompatActivity {
             list.add(buildCharacteristics);
             list.add(buildDisplayId);
             list.add(buildFingerprint);
+            list.add(buildFirmware);
             list.add(buildHardware);
             list.add(buildHost);
-            list.add(buildId2);
             list.add(buildRadio);
             list.add(buildBuildTags);
+            list.add(buildSeLinux);
             list.add(buildSerial);
             list.add(buildTime);
             list.add(buildType);
