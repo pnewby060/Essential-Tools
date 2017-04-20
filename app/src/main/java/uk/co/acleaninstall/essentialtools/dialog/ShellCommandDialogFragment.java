@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.BindViews;
@@ -25,6 +26,8 @@ import uk.co.acleaninstall.essentialtools.util.MiscTools;
 
 public class ShellCommandDialogFragment extends DialogFragment {
 
+    @BindView(R.id.runCommandLayout)
+    LinearLayout layout;
     @BindView(R.id.runCommandDialogTitle)
     TextView titleView;
     @BindView(R.id.runCommandDialogContent)
@@ -88,7 +91,11 @@ public class ShellCommandDialogFragment extends DialogFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.dialog_fragment_shell_command, container);
+
+        View view = inflater.inflate(R.layout.dialog_fragment_shell_command, container);
+
+        return view;
+
     }
 
 
