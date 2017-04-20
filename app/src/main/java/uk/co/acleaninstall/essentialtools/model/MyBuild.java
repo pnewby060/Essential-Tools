@@ -3,6 +3,7 @@ package uk.co.acleaninstall.essentialtools.model;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Build;
+import com.jrummyapps.android.shell.Shell;
 import java.lang.reflect.Method;
 import uk.co.acleaninstall.essentialtools.MyApp;
 
@@ -54,6 +55,13 @@ public class MyBuild {
         Build.SERIAL;
     public static final String BUILD_TAGS =
         Build.TAGS;
+    public static final String SELINUX() {
+        String returnedValue = Shell.SU.run("getenforce").getStdout();
+        if (returnedValue == null) {
+            returnedValue = Shell.SU.run("getenforce").getStderr();
+        }
+        return returnedValue;
+    }
     public static final String TIME =
         SystemProperties.get(MyApp.getContext(), "ro.build.date");
     public static final String BUILD_TYPE =
