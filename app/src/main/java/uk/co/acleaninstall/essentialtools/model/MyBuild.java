@@ -39,22 +39,22 @@ public class MyBuild {
 
     public static final String BUILD_CHARACTERISTICS =
         SystemProperties.get(MyApp.getContext(), "ro.build.characteristics");
-    public static final String DISPLAY_NAME =
-        Build.DISPLAY;
     public static final String FINGERPRINT =
         Build.FINGERPRINT;
+    public static final String FIRMWARE =
+        Build.ID;
     public static final String HARDWARE =
         Build.HARDWARE;
     public static final String HOST =
         Build.HOST;
-    public static final String FIRMWARE =
-        Build.ID;
+    public static final String ID =
+        Build.DISPLAY;
     public static final String RADIO_VERSION =
         Build.getRadioVersion();
     public static final String SERIAL =
         Build.SERIAL;
-    public static final String BUILD_TAGS =
-        Build.TAGS;
+
+
     public static final String SELINUX() {
         String returnedValue = Shell.SU.run("getenforce").getStdout();
         if (returnedValue == null) {
@@ -62,9 +62,13 @@ public class MyBuild {
         }
         return returnedValue;
     }
+
+
+    public static final String TAGS =
+        Build.TAGS;
     public static final String TIME =
         SystemProperties.get(MyApp.getContext(), "ro.build.date");
-    public static final String BUILD_TYPE =
+    public static final String TYPE =
         Build.TYPE;
     public static final String USER =
         Build.USER;
