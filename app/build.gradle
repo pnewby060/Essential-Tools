@@ -37,6 +37,7 @@ dependencies {
     provided files('libs/android-common-all-1.1.2-sources.jar')
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile project(':lazylibrary')
+    compile project(':quietlibrary')
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:design:25.3.1'
     compile 'com.android.support:cardview-v7:25.3.1'
@@ -55,5 +56,5 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.1'
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
-    
+
 }

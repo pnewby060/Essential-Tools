@@ -8,7 +8,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import com.scottyab.rootbeer.RootBeer;
 import java.util.ArrayList;
 import java.util.List;
 import uk.co.acleaninstall.essentialtools.MyApp;
@@ -17,7 +16,7 @@ import uk.co.acleaninstall.essentialtools.adapter.RootInfoRecyclerviewAdapter;
 import uk.co.acleaninstall.essentialtools.listener.CustomItemClickListener;
 import uk.co.acleaninstall.essentialtools.model.RootInfoModel;
 import uk.co.acleaninstall.essentialtools.util.MiscTools;
-import uk.co.acleaninstall.essentialtools.util.RootTools;
+import uk.co.acleaninstall.quietlibrary.RootEquipment;
 
 public class RootInfoActivity extends AppCompatActivity {
 
@@ -30,7 +29,7 @@ public class RootInfoActivity extends AppCompatActivity {
     RecyclerView.Adapter mAdapter;
     RecyclerView.LayoutManager mLayoutManager;
 
-    RootBeer mRootBeer;
+    RootEquipment mRootEquipment;
 
 
     @Override
@@ -38,8 +37,7 @@ public class RootInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         // Init our RootBeer library
-        mRootBeer = new RootBeer(MyApp.getContext());
-        mRootBeer.setLogging(true);
+        mRootEquipment = new RootEquipment(MyApp.getContext());
 
         setContentView(R.layout.activity_root_info);
         ButterKnife.bind(this);
@@ -101,16 +99,16 @@ public class RootInfoActivity extends AppCompatActivity {
             RootInfoModel checkSUbyWhich = new RootInfoModel(
                 getString(R.string.rootInfoCheckSuExists),
                 "Shows if phone is rooted by checking if SU exists. Runs a which su command",
-                String.valueOf(RootTools.checkSuExists()));
+                String.valueOf(mRootEquipment.checkSuExists()));
 
             RootInfoModel checkRWpaths = new RootInfoModel(getString(R.string.rootInfoCheckRWpaths),
                 "Checks if System paths can be mounted RW. You can only do this if you were rooted",
-                String.valueOf(mRootBeer.checkForRWPaths()));
+                String.valueOf(mRootEquipment.checkForRWPaths()));
 
-            RootInfoModel checkDangerProps = new RootInfoModel(getString(R.string.rootInfoCheckDangerProps),
+            RootInfoModel checkDangerProps = new RootInfoModel(
+                getString(R.string.rootInfoCheckDangerProps),
                 "Searches for dangerous properties from the build.prop file",
-                String.valueOf(mRootBeer.checkForDangerousProps()));
-
+                String.valueOf(mRootEquipment.checkForDangerousProps()));
 
             list.add(checkSUbyWhich);
             list.add(checkRWpaths);
