@@ -45,7 +45,10 @@
             android:name=".activity.OtherToolsActivity"
             android:label=""
             android:parentActivityName=".activity.MainActivity"/>
-        <activity android:name=".activity.RootInfoActivity"></activity>
+        <activity
+            android:name=".activity.RootInfoActivity"
+            android:label=""
+            android:parentActivityName=".activity.MainActivity"/>
     </application>
 
 </manifest>

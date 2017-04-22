@@ -8,8 +8,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import com.scottyab.rootbeer.RootBeer;
 import java.util.ArrayList;
 import java.util.List;
+import uk.co.acleaninstall.essentialtools.MyApp;
 import uk.co.acleaninstall.essentialtools.R;
 import uk.co.acleaninstall.essentialtools.adapter.RootInfoRecyclerviewAdapter;
 import uk.co.acleaninstall.essentialtools.listener.CustomItemClickListener;
@@ -27,10 +29,17 @@ public class RootInfoActivity extends AppCompatActivity {
     RecyclerView.Adapter mAdapter;
     RecyclerView.LayoutManager mLayoutManager;
 
+    RootBeer mRootBeer;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Init our RootBeer library
+        mRootBeer = new RootBeer(MyApp.getContext());
+        mRootBeer.setLogging(true);
+
         setContentView(R.layout.activity_root_info);
         ButterKnife.bind(this);
 
@@ -87,6 +96,17 @@ public class RootInfoActivity extends AppCompatActivity {
         ArrayList<RootInfoModel> getList() {
 
             // Our list of root info models to choose from
+            RootInfoModel checkSUbyWhich = new RootInfoModel(
+                getString(R.string.rootInfoCheckSuExists),
+                "Shows if phone is rooted by checking if SU exists. Runs a which su command",
+                String.valueOf(mRootBeer.checkSuExists()));
+
+            RootInfoModel checkRWpaths = new RootInfoModel(getString(R.string.rootInfoCheckRWpaths),
+                "Checks if System paths can be mounted RW. You can only do this if you were rooted",
+                String.valueOf(mRootBeer.checkForRWPaths()));
+
+            list.add(checkSUbyWhich);
+            list.add(checkRWpaths);
 
             return (ArrayList<RootInfoModel>) list;
         }

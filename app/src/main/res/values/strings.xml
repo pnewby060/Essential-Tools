@@ -61,6 +61,8 @@
     <string name="shell_command_pm">pm</string>
     <string name="device_build_characteristics">Characteristics</string>
     <string name="device_selinux">SELinux status</string>
+    <string name="rootInfoCheckSuExists">Check if SU Exists</string>
+    <string name="rootInfoCheckRWpaths">Check for RW Paths</string>
 
     <!-- Escapes
 

@@ -50,6 +50,7 @@ dependencies {
     compile 'at.amartinz:execution:1.0.1'
     compile 'com.nillith:miscutils:0.2.2'
     compile 'com.jrummyapps:android-shell:1.0.1'
+    compile 'com.scottyab:rootbeer-lib:0.0.6'
     compile 'com.txusballesteros:AutoscaleEditText:1.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.1'
     testCompile 'junit:junit:4.12'
