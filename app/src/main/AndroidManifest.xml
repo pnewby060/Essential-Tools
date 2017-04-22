@@ -24,27 +24,28 @@
         <activity
             android:name=".activity.PhoneInfoActivity"
             android:label=""
-            android:parentActivityName=".activity.MainActivity"></activity>
+            android:parentActivityName=".activity.MainActivity"/>
         <activity
             android:name=".activity.BuildInfoActivity"
             android:label=""
-            android:parentActivityName=".activity.MainActivity"></activity>
+            android:parentActivityName=".activity.MainActivity"/>
         <activity
             android:name=".activity.SimInfoActivity"
             android:label=""
-            android:parentActivityName=".activity.MainActivity"></activity>
+            android:parentActivityName=".activity.MainActivity"/>
         <activity
             android:name=".activity.HiLoGameActivity"
             android:label=""
-            android:parentActivityName=".activity.MainActivity"></activity>
+            android:parentActivityName=".activity.MainActivity"/>
         <activity
             android:name=".activity.ShellCommandsActivity"
             android:label=""
-            android:parentActivityName=".activity.MainActivity"></activity>
+            android:parentActivityName=".activity.MainActivity"/>
         <activity
             android:name=".activity.OtherToolsActivity"
             android:label=""
-            android:parentActivityName=".activity.MainActivity"></activity>
+            android:parentActivityName=".activity.MainActivity"/>
+        <activity android:name=".activity.RootInfoActivity"></activity>
     </application>
 
 </manifest>

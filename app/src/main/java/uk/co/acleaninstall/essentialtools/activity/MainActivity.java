@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.viewpager)
     ViewPager mViewPager;
 
+    // Our command to retrieve the Android device info for the subtitle
     public static final String ANDROID_DEVICE_SUBTITLE
         = "echo \"Android $(cat /system/build.prop | grep build.version.release | sed s/.*=//) ($(cat /system/build.prop | grep ro.build.host | sed s/.*=//) $(cat /system/build.prop | grep ro.modversion | sed s/.*=//))\\n$(cat /system/build.prop | grep ro.product.model | sed s/.*=//) ($(cat /system/build.prop | grep ro.product.device | sed s/#.*// | sed s/.*=// | tr -d \\n))\"";
 
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
     @Override protected void onDestroy() {
 
         // cleanup our console history
-        ShellManager.get().cleanupShells();
+        ShellManager.get().onDestroy();
 
         super.onDestroy();
     }
