@@ -16,10 +16,12 @@ import uk.co.acleaninstall.essentialtools.R;
 import uk.co.acleaninstall.essentialtools.activity.BuildInfoActivity;
 import uk.co.acleaninstall.essentialtools.activity.OtherToolsActivity;
 import uk.co.acleaninstall.essentialtools.activity.PhoneInfoActivity;
+import uk.co.acleaninstall.essentialtools.activity.RootInfoActivity;
 import uk.co.acleaninstall.essentialtools.activity.SimInfoActivity;
 import uk.co.acleaninstall.essentialtools.adapter.ToolsRecyclerviewAdapter;
 import uk.co.acleaninstall.essentialtools.listener.CustomItemClickListener;
 import uk.co.acleaninstall.essentialtools.model.ToolModel;
+import uk.co.acleaninstall.essentialtools.util.MiscTools;
 
 public class ToolsFragment extends Fragment {
 
@@ -107,7 +109,10 @@ public class ToolsFragment extends Fragment {
                         startActivity(new Intent(v.getContext(), OtherToolsActivity.class));
                         break;
 
-                    // TODO case 4 rootInfoActivity
+                    case 4:
+                        // Root Info Activity
+                        MiscTools.startActivity(v.getContext(), RootInfoActivity.class);
+                        break;
                 }
 
             }
