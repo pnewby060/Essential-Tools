@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.viewpager)
     ViewPager mViewPager;
 
-    public static final String Doof
+    public static final String ANDROID_DEVICE_SUBTITLE
         = "echo \"Android $(cat /system/build.prop | grep build.version.release | sed s/.*=//) ($(cat /system/build.prop | grep ro.build.host | sed s/.*=//) $(cat /system/build.prop | grep ro.modversion | sed s/.*=//))\\n$(cat /system/build.prop | grep ro.product.model | sed s/.*=//) ($(cat /system/build.prop | grep ro.product.device | sed s/#.*// | sed s/.*=// | tr -d \\n))\"";
 
 
@@ -71,9 +71,19 @@ public class MainActivity extends AppCompatActivity {
         // push out toolbar down from no action bar theme value
         mToolbar.setPadding(0, MiscTools.getStatusBarHeight(), 0, 0);
 
-        CommandResult result = Shell.SU.run(Doof);
+        // Set our device info to the subtitle
+        CommandResult result = Shell.SU.run(ANDROID_DEVICE_SUBTITLE);
 
+        // Set our subtitles text small
+        mToolbar.setSubtitleTextAppearance(this, R.style.toolbarSubtitleTextAppereance);
+
+        // Set the subtitles text to either the Stdout or Stderr if there was an error
         mToolbar.setSubtitle(result.isSuccessful() ? result.getStdout() : result.getStderr());
+
+        // If all was successful then close any SU consoles that are running
+        if (result.isSuccessful()) {
+            Shell.SU.closeConsole();
+        }
     }
 
 
