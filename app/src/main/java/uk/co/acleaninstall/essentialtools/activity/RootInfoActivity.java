@@ -17,6 +17,7 @@ import uk.co.acleaninstall.essentialtools.adapter.RootInfoRecyclerviewAdapter;
 import uk.co.acleaninstall.essentialtools.listener.CustomItemClickListener;
 import uk.co.acleaninstall.essentialtools.model.RootInfoModel;
 import uk.co.acleaninstall.essentialtools.util.MiscTools;
+import uk.co.acleaninstall.essentialtools.util.RootTools;
 
 public class RootInfoActivity extends AppCompatActivity {
 
@@ -90,6 +91,7 @@ public class RootInfoActivity extends AppCompatActivity {
 
         RootInfoModelsList() {
             list = new ArrayList<>();
+
         }
 
 
@@ -99,14 +101,20 @@ public class RootInfoActivity extends AppCompatActivity {
             RootInfoModel checkSUbyWhich = new RootInfoModel(
                 getString(R.string.rootInfoCheckSuExists),
                 "Shows if phone is rooted by checking if SU exists. Runs a which su command",
-                String.valueOf(mRootBeer.checkSuExists()));
+                String.valueOf(RootTools.checkSuExists()));
 
             RootInfoModel checkRWpaths = new RootInfoModel(getString(R.string.rootInfoCheckRWpaths),
                 "Checks if System paths can be mounted RW. You can only do this if you were rooted",
                 String.valueOf(mRootBeer.checkForRWPaths()));
 
+            RootInfoModel checkDangerProps = new RootInfoModel(getString(R.string.rootInfoCheckDangerProps),
+                "Searches for dangerous properties from the build.prop file",
+                String.valueOf(mRootBeer.checkForDangerousProps()));
+
+
             list.add(checkSUbyWhich);
             list.add(checkRWpaths);
+            list.add(checkDangerProps);
 
             return (ArrayList<RootInfoModel>) list;
         }

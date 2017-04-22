@@ -63,6 +63,7 @@
     <string name="device_selinux">SELinux status</string>
     <string name="rootInfoCheckSuExists">Check if SU Exists</string>
     <string name="rootInfoCheckRWpaths">Check for RW Paths</string>
+    <string name="rootInfoCheckDangerProps">Check for dangerous properties</string>
 
     <!-- Escapes
 

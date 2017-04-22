@@ -1,2 +1,2 @@
-include ':app', ':lazylibrary'
+include ':app', ':lazylibrary', ':quietlibrary'
 project(':app').projectDir = new File('app')
